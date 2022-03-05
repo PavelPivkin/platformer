@@ -13,5 +13,5 @@ public class LootHeal : MonoBehaviour
 
             Destroy(gameObject);
         }
-}
+    }
 }

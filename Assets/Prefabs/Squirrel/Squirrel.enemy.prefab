@@ -1,5 +1,79 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!95 &5283888054847119138
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5013999389640630034}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 874af077ba92426428a018411089cc82, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &5283888054847119136
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5013999389640630034}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d24acbc60b7ac6e41b043b57898f4910, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Events:
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5283888054773941844}
+        m_TargetAssemblyTypeName: BatchPrefabCreator, Assembly-CSharp
+        m_MethodName: Create
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5283888054030804239}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5283888053941963126}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &5283888053739660548
 GameObject:
   m_ObjectHideFlags: 0
@@ -522,8 +596,10 @@ GameObject:
   - component: {fileID: 5283888054669992857}
   - component: {fileID: 5283888054669992839}
   - component: {fileID: 5283888054669992836}
+  - component: {fileID: 543547050841429278}
+  - component: {fileID: 8099177042276284694}
   m_Layer: 0
-  m_Name: Squirrel
+  m_Name: Squirrel.enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -630,6 +706,35 @@ MonoBehaviour:
   - {fileID: 7006373592917816202}
   - {fileID: 3261241756251876345}
   - {fileID: 4113562680656431625}
+--- !u!54 &543547050841429278
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5283888054669992856}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!114 &8099177042276284694
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5283888054669992856}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f7d8a87f81341b4f87ac97edbf70dd6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DistanceToActivate: 20
 --- !u!1 &5283888054773941847
 GameObject:
   m_ObjectHideFlags: 0
@@ -681,80 +786,6 @@ MonoBehaviour:
   - {fileID: 5283888053739660549}
   - {fileID: 5283888054218646981}
   - {fileID: 5283888053894762168}
---- !u!95 &5283888054847119138
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5013999389640630034}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 874af077ba92426428a018411089cc82, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &5283888054847119136
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5013999389640630034}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d24acbc60b7ac6e41b043b57898f4910, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Events:
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 5283888054773941844}
-        m_TargetAssemblyTypeName: BatchPrefabCreator, Assembly-CSharp
-        m_MethodName: Create
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 5283888054030804239}
-        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
-        m_MethodName: Play
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 5283888053941963126}
-        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
-        m_MethodName: Play
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!1 &5283888055509499899
 GameObject:
   m_ObjectHideFlags: 0
@@ -898,6 +929,26 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5dab74b4a59145c458a8ec4cd3f7c8de, type: 3}
+--- !u!23 &7006373592917816202 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 2913696577783075273, guid: 5dab74b4a59145c458a8ec4cd3f7c8de, type: 3}
+  m_PrefabInstance: {fileID: 5283888054870942275}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &3802515818461340930 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 9048043694916241217, guid: 5dab74b4a59145c458a8ec4cd3f7c8de, type: 3}
+  m_PrefabInstance: {fileID: 5283888054870942275}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &2559493636987956143 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -1526436779496240660, guid: 5dab74b4a59145c458a8ec4cd3f7c8de, type: 3}
+  m_PrefabInstance: {fileID: 5283888054870942275}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &9047999671561602484 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 3802401426244954103, guid: 5dab74b4a59145c458a8ec4cd3f7c8de, type: 3}
+  m_PrefabInstance: {fileID: 5283888054870942275}
+  m_PrefabAsset: {fileID: 0}
 --- !u!23 &930722915796406315 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: -4197720168603880856, guid: 5dab74b4a59145c458a8ec4cd3f7c8de, type: 3}
@@ -933,6 +984,11 @@ MeshRenderer:
   m_CorrespondingSourceObject: {fileID: 2447562882821648428, guid: 5dab74b4a59145c458a8ec4cd3f7c8de, type: 3}
   m_PrefabInstance: {fileID: 5283888054870942275}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &5683152736799835560 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 5dab74b4a59145c458a8ec4cd3f7c8de, type: 3}
+  m_PrefabInstance: {fileID: 5283888054870942275}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &5013999389640630034 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 5dab74b4a59145c458a8ec4cd3f7c8de, type: 3}
@@ -946,30 +1002,5 @@ MeshRenderer:
 --- !u!23 &3261241756251876345 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: 7212064183713745338, guid: 5dab74b4a59145c458a8ec4cd3f7c8de, type: 3}
-  m_PrefabInstance: {fileID: 5283888054870942275}
-  m_PrefabAsset: {fileID: 0}
---- !u!23 &7006373592917816202 stripped
-MeshRenderer:
-  m_CorrespondingSourceObject: {fileID: 2913696577783075273, guid: 5dab74b4a59145c458a8ec4cd3f7c8de, type: 3}
-  m_PrefabInstance: {fileID: 5283888054870942275}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &5683152736799835560 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 5dab74b4a59145c458a8ec4cd3f7c8de, type: 3}
-  m_PrefabInstance: {fileID: 5283888054870942275}
-  m_PrefabAsset: {fileID: 0}
---- !u!23 &2559493636987956143 stripped
-MeshRenderer:
-  m_CorrespondingSourceObject: {fileID: -1526436779496240660, guid: 5dab74b4a59145c458a8ec4cd3f7c8de, type: 3}
-  m_PrefabInstance: {fileID: 5283888054870942275}
-  m_PrefabAsset: {fileID: 0}
---- !u!23 &9047999671561602484 stripped
-MeshRenderer:
-  m_CorrespondingSourceObject: {fileID: 3802401426244954103, guid: 5dab74b4a59145c458a8ec4cd3f7c8de, type: 3}
-  m_PrefabInstance: {fileID: 5283888054870942275}
-  m_PrefabAsset: {fileID: 0}
---- !u!23 &3802515818461340930 stripped
-MeshRenderer:
-  m_CorrespondingSourceObject: {fileID: 9048043694916241217, guid: 5dab74b4a59145c458a8ec4cd3f7c8de, type: 3}
   m_PrefabInstance: {fileID: 5283888054870942275}
   m_PrefabAsset: {fileID: 0}

@@ -16,7 +16,7 @@ public class Bullet : MonoBehaviour
     }
 
     public void OnTriggerEnter(Collider other) {
-        if (other.attachedRigidbody.GetComponent<EnemyHealth>()) {
+        if (other && other.attachedRigidbody && other.attachedRigidbody.GetComponent<EnemyHealth>()) {
             Instantiate(EffectPrefab, transform.position, Quaternion.identity);
             Destroy(gameObject);
         }
